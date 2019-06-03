@@ -12,10 +12,10 @@ $(document).ready(function() {
     var losses = 0;
 
 // Computer assigns random number (1-12) to each crystal
-    var redNum = Math.floor(Math.random()*11+1);
-    var yellowNum = Math.floor(Math.random()*11+1);
-    var blueNum = Math.floor(Math.random()*11+1);
-    var greenNum = Math.floor(Math.random()*11+1);
+    var redNumber = Math.floor(Math.random()*11+1);
+    var yellowNumber = Math.floor(Math.random()*11+1);
+    var blueNumber = Math.floor(Math.random()*11+1);
+    var greenNumber = Math.floor(Math.random()*11+1);
 
 // Win function 
    function win() {
@@ -35,10 +35,10 @@ $(document).ready(function() {
     function reset() {
         computerNumber = Math.floor(Math.random() * 102) + 19;
         console.log(computerNumber); 
-        redNum = Math.floor(Math.random()*11+1);
-        yellowNum = Math.floor(Math.random()*11+1);
-        blueNum = Math.floor(Math.random()*11+1);
-        greenNum = Math.floor(Math.random()*11+1);
+        redNumber = Math.floor(Math.random()*11+1);
+        yellowNumber = Math.floor(Math.random()*11+1);
+        blueNumber = Math.floor(Math.random()*11+1);
+        greenNumber = Math.floor(Math.random()*11+1);
         yourNumber = 0;
         $("#randomNumber").text(computerNumber);
         // yourNumber resets to 0 on the page
@@ -47,7 +47,7 @@ $(document).ready(function() {
 
 // When the player clicks on red, the randomly selected number for that crystal is added to computerNumber
     $("#red").on("click", function() {
-        yourNumber = yourNumber + redNum;
+        yourNumber = yourNumber + redNumber;
         console.log(yourNumber);
         $("#yourNumber").text(yourNumber);
         // If the number in #yourNumber equals the #randomNumber, the player wins
@@ -60,7 +60,7 @@ $(document).ready(function() {
     })
 
     $("#yellow").on("click", function() {
-        yourNumber = yourNumber + yellowNum;
+        yourNumber = yourNumber + yellowNumber;
         console.log(yourNumber);
         $("#yourNumber").text(yourNumber);
         // If the number in #yourNumber equals the #randomNumber, the player wins
@@ -73,7 +73,7 @@ $(document).ready(function() {
     })
 
     $("#blue").on("click", function() {
-        yourNumber = yourNumber + blueNum;
+        yourNumber = yourNumber + blueNumber;
         console.log(yourNumber);
         $("#yourNumber").text(yourNumber);
         // If the number in #yourNumber equals the #randomNumber, the player wins
@@ -86,7 +86,7 @@ $(document).ready(function() {
     })
 
     $("#green").on("click", function() {
-        yourNumber = yourNumber + greenNum;
+        yourNumber = yourNumber + greenNumber;
         console.log(yourNumber);
         $("#yourNumber").text(yourNumber);
         // If the number in #yourNumber equals the #randomNumber, the player wins
